@@ -323,7 +323,6 @@
                 </p>
                 <img src="pics/Screenshot 2025-05-06 212620.png" alt="shapes" width="100%" height=auto> 
                 <img src="pics/Screenshot 2025-05-06 212724.png" alt="shapes" width="100%" height="auto"> 
-                <p> While this community got banned, I have to mention that many services store bot tokens : botghost etc... and never ha issues.</p>
             </div>
 
             <div class="side-image-container">
@@ -370,30 +369,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.querySelector('.search-input');
-            const tableRows = document.querySelectorAll('.server-table tbody tr');
-
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-                
-                tableRows.forEach(row => {
-                    const serverName = row.cells[0].textContent.toLowerCase();
-                    const inviteLink = row.cells[1].textContent.toLowerCase();
-                    const tagAlt = row.cells[2].querySelector('img').alt.toLowerCase();
-                    
-                    if (serverName.includes(searchTerm) || 
-                        inviteLink.includes(searchTerm) || 
-                        tagAlt.includes(searchTerm)) {
-                        row.style.display = '';
-                    } else {
-                        row.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
